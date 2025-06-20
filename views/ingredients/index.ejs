@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Ingredients</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Ingredients List</h1>
+    <a href="/ingredients/new">Add New Ingredient</a>
+    <h1>List of ingredients:</h1>
+    <ul>
+        <% ingredients.forEach(ingredient => { %>
+            <li>
+                <a href="/ingredients/<%= ingredient._id %>"><%= ingredient.name %></a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
